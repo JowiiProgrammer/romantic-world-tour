@@ -23,9 +23,6 @@ importers:
       '@types/canvas-confetti':
         specifier: ^1.6.4
         version: 1.6.4
-      '@vercel/og':
-        specifier: ^0.6.2
-        version: 0.6.2
       astro:
         specifier: ^4.14.5
         version: 4.14.5(rollup@4.21.1)(typescript@5.5.4)
