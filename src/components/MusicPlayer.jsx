@@ -117,17 +117,17 @@ const MusicPlayer = ({ songs }) => {
             setHasInteracted(true);
             playAudio();
           }}
-          className="w-full bg-white text-black text-xs sm:text-sm rounded-full p-2 shadow-lg mb-2"
+          className="w-full bg-white text-black text-sm rounded-full p-2 shadow-lg mb-2"
         >
           Reproducir Música
         </button>
       )}
-      <div className="flex flex-col sm:flex-row items-center justify-between">
-        <div className="flex items-center space-x-2 w-full sm:w-1/3 mb-2 sm:mb-0">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-2 w-1/3">
           <img
             src={songs[currentSong].cover}
             alt={`Portada de ${songs[currentSong].title}`}
-            className="w-8 h-8 sm:w-10 sm:h-10 rounded-sm shadow-md"
+            className="w-10 h-10 rounded-sm shadow-md"
           />
           <div className="truncate">
             <h2 className="text-xs font-semibold truncate">{songs[currentSong].title}</h2>
@@ -135,7 +135,7 @@ const MusicPlayer = ({ songs }) => {
           </div>
         </div>
         
-        <div className="flex items-center space-x-2 w-full sm:w-1/3 justify-center mb-2 sm:mb-0">
+        <div className="flex items-center space-x-2 w-1/3 justify-center">
           <button onClick={prevSong} className="text-gray-400 hover:text-white" aria-label="Canción anterior">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
               <path d="M8.445 14.832A1 1 0 0010 14v-2.798l5.445 3.63A1 1 0 0017 14V6a1 1 0 00-1.555-.832L10 8.798V6a1 1 0 00-1.555-.832l-6 4a1 1 0 000 1.664l6 4z" />
@@ -143,11 +143,11 @@ const MusicPlayer = ({ songs }) => {
           </button>
           <button onClick={togglePlay} className="bg-white text-black rounded-full p-1 hover:scale-105 transition-transform" aria-label={isPlaying ? "Pausar" : "Reproducir"}>
             {isPlaying ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
               </svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
               </svg>
             )}
@@ -159,7 +159,7 @@ const MusicPlayer = ({ songs }) => {
           </button>
         </div>
         
-        <div className="flex items-center space-x-2 w-full sm:w-1/3 justify-end">
+        <div className="flex items-center space-x-2 w-1/3 justify-end">
           <button className="text-gray-400 hover:text-white" aria-label="Control de volumen">
             {volume === 0 ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -182,7 +182,7 @@ const MusicPlayer = ({ songs }) => {
             step="0.01"
             value={volume}
             onChange={handleVolumeChange}
-            className="w-12 sm:w-16 h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer"
+            className="w-16 h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer"
             style={{
               background: `linear-gradient(to right, #1DB954 0%, #1DB954 ${volume * 100}%, #4D4D4D ${volume * 100}%, #4D4D4D 100%)`,
             }}
