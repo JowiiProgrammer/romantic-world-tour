@@ -19,8 +19,11 @@
     "canvas-confetti": "^1.9.3",
     "framer-motion": "^11.3.30",
     "howler": "^2.2.4",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4"
   }
