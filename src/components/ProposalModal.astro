@@ -2,22 +2,22 @@
 // src/components/ProposalModal.astro
 ---
 
-<div id="proposalModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-    <div class="bg-white text-black p-8 rounded-lg text-center">
-      <h2 class="text-2xl mb-4">¿Quieres ser mi novia?</h2>
-      <div class="flex justify-center space-x-4">
-        <button
-          id="acceptButton"
-          class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition-colors duration-300"
-        >
-          Sí, acepto
-        </button>
-        <button
-          id="rejectButton"
-          class="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-colors duration-300"
-        >
-          No, acepto
-        </button>
-      </div>
+<div id="proposalModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden p-4">
+  <div class="bg-white text-black p-6 sm:p-8 rounded-lg text-center max-w-sm w-full">
+    <h2 class="text-xl sm:text-2xl mb-4">¿Quieres ser mi novia?</h2>
+    <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4">
+      <button
+        id="acceptButton"
+        class="bg-green-500 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-green-600 transition-colors duration-300"
+      >
+        Sí, acepto
+      </button>
+      <button
+        id="rejectButton"
+        class="bg-red-500 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-red-600 transition-colors duration-300"
+      >
+        No, acepto
+      </button>
     </div>
   </div>
+</div>
